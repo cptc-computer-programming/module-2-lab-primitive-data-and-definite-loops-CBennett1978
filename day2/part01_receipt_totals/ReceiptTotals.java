@@ -1,12 +1,10 @@
 package day2.part01_receipt_totals;
 
 public class ReceiptTotals {
-
     public static void main(String[] args) {
         printReceiptSummary();
         printClosingCountdown();
     }
-
     /* 
     Scenario:
         A store sold items numbered 100 through 105
