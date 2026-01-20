@@ -38,7 +38,7 @@ public class PatternSection {
     public static void main(String[] args) {
    // Methods
 		printEdge();
-        //printDiamondTop();
+        printDiamondTop();
         //printDiamondBottom();
         printEdge();
     }
