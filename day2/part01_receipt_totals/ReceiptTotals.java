@@ -11,18 +11,34 @@ public class ReceiptTotals {
     // A store sold items numbered 100 through 105.
     // Each item costs $5.
     // Every 3rd item starting at 100 is on sale for $3 instead.
-    //
-    // TODO:
-    // - Calculate and print the total cost.
-    // - Do NOT hard-code the total.
-    public static void printReceiptSummary() {
-
+    
+    // TO-DO:
+    // - Calculate and print the total cost
+    // - Do NOT hard-code the total
+public static void printReceiptSummary() {
+    //define variable outside of the loop
+    int totalCost = 0;
+    
+    for (int item = 100; item <= 105; item++) {
+        // the modulo operator (%) will give the leftover after integer division 
+        if ((item - 100) % 3 == 0) {
+        System.out.println("item number at discount: " + item);
+            totalCost += 3;
+        } else {
+            // take a running total
+            // where every item is $5
+            totalCost += 5;
+        }
     }
-
-    // TODO:
+    
+    System.out.println("Total Cost: $" + totalCost);
+    }
+    // TO-DO:
     // Print a countdown from 5 down to 0 on one line.
     public static void printClosingCountdown() {
-    
+        for (int i = 5; i >= 0; i--) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); 
+       }
     }
-    
-}
