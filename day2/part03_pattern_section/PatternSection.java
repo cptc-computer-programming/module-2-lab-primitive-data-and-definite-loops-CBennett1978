@@ -39,7 +39,7 @@ public class PatternSection {
    // Methods
 		printEdge();
         printDiamondTop();
-        //printDiamondBottom();
+        printDiamondBottom();
         printEdge();
     }
 
@@ -89,50 +89,38 @@ public class PatternSection {
             System.out.println("|");
         }
     }
-
-    // TODO: Print the bottom half (mirror/inverse of the top half).
-    // Requirements:
-    // - total rows: SIZE * 2
-    // - each row starts/ends with '|'
-    // - inside, dots increase while "\/" pairs decrease, then dots again
-    // - use SIZE in all loop bounds
     
+    //Method 3
+	// Print the bottom half of the double diamond pattern
     public static void printDiamondBottom() {
-        // loop through total rows in the bottom half of the diamond
-        // print a |
-        // print the leading dots
-            //they should increase with every row
-        // print the /\
-        // print the trailing dots
-        // print the | with new line
-
-        // Bottom half (mirror of top)
-    public static void printDiamondBottom() {
-        for (int row = SIZE * 2 - 1; row >= 0; row--) {
+		// Loop Rows
+        for (int row = 0; row < SIZE * 2; row++) {
+			// Start Row with Pipe Character ( | )
             System.out.print("|");
 
-            int dots = Math.abs((SIZE - 1) - row);
-            int slashes = SIZE - dots;
+            // Dots Increase as Row Increases
+            int dots = row;
 
-            // leading dots
+            // Loop Leading Dots
             for (int i = 0; i < dots; i++) {
                 System.out.print(".");
             }
 
-            // \/ pairs
-            for (int i = 0; i < slashes; i++) {
+            // Loop Triangles
+				// \/ pairs decrease as row increases
+            int triangles = (SIZE * 2) - row;
+            for (int i = 0; i < triangles; i++) {
                 System.out.print("\\/");
             }
 
-            // trailing dots
+            // Loop Trailing Dots
             for (int i = 0; i < dots; i++) {
                 System.out.print(".");
             }
-
+			// End Row with Pipe Character ( | )
             System.out.println("|");
-            }
         }
-    }
     
+}
 
 }
